@@ -1,15 +1,80 @@
 body {
-	font-family: 'Josefin Sans', sans-serif !important;;
+	font-family: 'Josefin Sans', sans-serif !important;
+	background-color: black;
+}
+.black{
+	background-color: black;
 }
 
 .text-slanted {
 	font-family: 'IM Fell Great Primer SC', serif;
 }
 
-.text-orange {
-	color: orange;
+.text-color {
+	color: white;
+	/* color: orange; */
 }
 
 .letter-spacing {
 	letter-spacing: 0.5rem;
+}
+
+.background-404 {
+	background: url("./images/404-img.jpeg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background1 {
+	/* transition: background-image 4s ease-in-out .5s; */
+	animation: fade-in-out ease 7s;
+	background-image: url("./images/sandwhich.jpeg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+	
+}
+.background2 {
+	animation: fade-in-out2 ease 7s;
+	background: url("./images/chicken-strawb.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background3 {
+	animation: fade-in-out ease 7s;
+	background: url("./images/assorted-pots.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background4 {
+	animation: fade-in-out2 ease 7s;
+	background: url("./images/corn-squash.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+.cp-top {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 45%;
+}
+
+@keyframes fade-in-out {
+	0% {opacity:0;}
+	50% {opacity:0.8}
+	100% {opacity:0}
+}
+@keyframes fade-in-out2 {
+	0% {opacity:0;}
+	50% {opacity:0.8}
+	100% {opacity:0}
+}
+@keyframes fade-in-out3 {
+	0% {opacity:0;}
+	50% {opacity:0.8}
+	100% {opacity:0}
 }
