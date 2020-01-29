@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 class CenterPiece extends Component{
 	state = {
-		title: "Recipe Riot",
+		title: this.props.customTitle,
 	}
 	
 	render() {

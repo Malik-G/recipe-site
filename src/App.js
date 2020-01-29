@@ -5,10 +5,10 @@ import {
 	Route
 } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import AllRecipes from './components/AllRecipes';
-import NotFound from './components/NotFound';
-import Recipe from './components/Recipe';
+import Home from './pages/Home';
+import AllRecipes from './pages/AllRecipes';
+import Recipe from './pages/SingleRecipe';
+import NotFound from './pages/NotFound';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

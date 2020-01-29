@@ -11,7 +11,7 @@ class Home extends Component {
 
 	componentDidMount() {
 		this.nextImage()
-		this.runInterval = setInterval(() => this.nextImage(), 7000)
+		this.runInterval = setInterval(() => this.nextImage(), 8000)
 	}
 
 	// componentWillUnmount() {
@@ -21,7 +21,7 @@ class Home extends Component {
 	nextImage(){
 		let imageNumber = this.state.image;
 		imageNumber += 1;
-		if(imageNumber > 4){
+		if(imageNumber > 5){
 			imageNumber = 1
 		}
 		switch(imageNumber) {
@@ -29,6 +29,7 @@ class Home extends Component {
 			case 2: this.setState({image: 2, background: 'background2' }); break;
 			case 3: this.setState({image: 3, background: 'background3' }); break;
 			case 4: this.setState({image: 4, background: 'background4' }); break;
+			case 5: this.setState({image: 5, background: 'background5' }); break;
 			default: return
 		}
 	}
@@ -40,7 +41,7 @@ class Home extends Component {
 				<div className={`${this.state.background}`}></div>
 				<div className="align-items-center cp-top">
 					<div className="col text-center">
-						<CenterPiece/>
+						<CenterPiece customTitle="Recipe Riot"/>
 					</div>
 				</div>
 			</div>

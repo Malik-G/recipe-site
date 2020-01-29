@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CenterPiece from '../components/CenterPiece';
 
 class NotFound extends Component {
 	render() {
@@ -7,7 +8,7 @@ class NotFound extends Component {
 			<div className=".container-fluid">
 				<div className="row align-items-center background-404">
 					<div className="col text-center">
-						<h1>Page Not Found</h1>
+						<CenterPiece customTitle="Page Not Found"/>
 					</div>
 				</div>
 			</div>
