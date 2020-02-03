@@ -1,0 +1,208 @@
+
+body {
+	font-family: 'Josefin Sans', sans-serif !important;
+	background-color: black;
+}
+
+/* ---------------------------------- */
+
+.align-center{
+	text-align: center;
+	position: relative;
+}
+.black{
+	background-color: black;
+}
+.campbells-img{
+	background-color: lightgrey;
+	border: 5px solid rgb(207, 145, 145);
+}
+.header-font{
+	font-size: 2.65rem;
+}
+.inline{
+	display: inline-block;
+}
+.letter-spacing {
+	letter-spacing: 0.5rem;
+}
+.margin {
+	margin: 5%;
+}
+.margin-top-ab {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 45%;
+}
+.src-img{
+	height:200px;
+	width:200px;
+	border-radius: 50%;
+}
+
+.src-img:hover{
+	animation: icon-hover ease-in-out 1s;
+	animation-iteration-count: infinite;
+}
+@keyframes icon-hover {
+	50%{
+		/* transform: translateY(-10px); */
+		/* -webkit-transform: translateY(-10px); */
+		transform: scale(0.95);
+	}
+	/* 100%{
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+	} */
+
+}
+
+.src-img-div{
+	border: 0.3rem solid black;
+	border-radius: 50%;
+	height:200px;
+	width:200px;
+}
+.text-align-center{
+	text-align: center;
+}
+.text-color {
+	color: white;
+	/* color: orange; */
+}
+.text-slanted {
+	font-family: 'IM Fell Great Primer SC', serif;
+}
+
+
+/* BANNER/BACKGROUND STYLING */
+
+.banner-text {
+	/* margin-top:5%; */
+	position: absolute;
+	/* margin: 50px; */
+	/* left:0; */
+	right:0;
+	top:75px;
+	left:0;
+	color: rgb(200, 20, 20);
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.background-404 {
+	background: url("../images/404-img.jpeg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background1 {
+	/* transition: background-image 4s ease-in-out .5s; */
+	animation: fade-in-out ease 4s;
+	-webkit-animation: fade-in-out ease 4s;
+	-moz-animation: fade-in-out ease 4s;
+	-o-animation: fade-in-out ease 4s;
+	-ms-animation: fade-in-out ease 4s;
+	background-image: url("../images/sandwhich.jpeg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+	
+}
+.background2 {
+	animation: fade-in-out2 ease 4s;
+	-webkit-animation: fade-in-out2 ease 4s;
+	-moz-animation: fade-in-out2 ease 4s;
+	-o-animation: fade-in-out2 ease 4s;
+	-ms-animation: fade-in-out2 ease 4s;
+	background: url("../images/chicken-strawb.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background3 {
+	animation: fade-in-out3 ease 4s;
+	-webkit-animation: fade-in-out3 ease 4s;
+	-moz-animation: fade-in-out3 ease 4s;
+	-o-animation: fade-in-out3 ease 4s;
+	-ms-animation: fade-in-out3 ease 4s;
+	background: url("../images/assorted-pots.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background4 {
+	animation: fade-in-out ease 4s;
+	-webkit-animation: fade-in-out ease 4s;
+	-moz-animation: fade-in-out ease 4s;
+	-o-animation: fade-in-out ease 4s;
+	-ms-animation: fade-in-out ease 4s;
+	background: url("../images/eggs.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.background5 {
+	animation: fade-in-out2 ease 4s;
+	-webkit-animation: fade-in-out2 ease 4s;
+	-moz-animation: fade-in-out2 ease 4s;
+	-o-animation: fade-in-out2 ease 4s;
+	-ms-animation: fade-in-out2 ease 4s;
+	background: url("../images/corn-squash.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+.banner1 {
+	/* transition: background-image 4s ease-in-out .5s; */
+	animation: fade-in-out ease 4s;
+	-webkit-animation: fade-in-out ease 4s;
+	-moz-animation: fade-in-out ease 4s;
+	-o-animation: fade-in-out ease 4s;
+	-ms-animation: fade-in-out ease 4s;
+	background-image: url("https://elvino.co.uk/wp-content/uploads/2016/03/Food-banner-2.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 25vh;
+	
+}
+.banner2 {
+	animation: fade-in-out2 ease 4s;
+	-webkit-animation: fade-in-out2 ease 4s;
+	-moz-animation: fade-in-out2 ease 4s;
+	-o-animation: fade-in-out2 ease 4s;
+	-ms-animation: fade-in-out2 ease 4s;
+	background: url("../images/chicken-strawb.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 25vh;
+}
+.banner3 {
+	animation: fade-in-out3 ease 4s;
+	-webkit-animation: fade-in-out3 ease 4s;
+	-moz-animation: fade-in-out3 ease 4s;
+	-o-animation: fade-in-out3 ease 4s;
+	-ms-animation: fade-in-out3 ease 4s;
+	background: url("../images/assorted-pots.jpg");
+	background-size: cover;
+	min-width: 100vw;
+	min-height: 25vh;
+}
+
+@keyframes fade-in-out {
+	0% {opacity:0;}
+	50% {opacity:0.8}
+	100% {opacity:0}
+}
+@keyframes fade-in-out2 {
+	0% {opacity:0;}
+	50% {opacity:0.8}
+	100% {opacity:0}
+}
+@keyframes fade-in-out3 {
+	0% {opacity:0;}
+	50% {opacity:0.8}
+	100% {opacity:0}
+}

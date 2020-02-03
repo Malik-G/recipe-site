@@ -6,11 +6,12 @@ import {
 } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import AllRecipes from './pages/AllRecipes';
-import Recipe from './pages/SingleRecipe';
+import AllRecipes from './pages/Sources';
+import Recipe from './pages/Details';
 import NotFound from './pages/NotFound';
-import './App.css';
+import './styles/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class App extends Component {
 	
@@ -22,7 +23,7 @@ class App extends Component {
 				<Navbar/>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route exact path="/all-recipes" component={AllRecipes} />
+					<Route exact path="/sources" component={AllRecipes} />
 					<Route path="/recipe/:id" component={Recipe} />
 					<Route path="" component={NotFound} />
 				</Switch>

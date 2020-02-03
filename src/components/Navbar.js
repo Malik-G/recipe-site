@@ -6,7 +6,7 @@ import '../styles/Navbar.css';
 function Navbar() {
 	return (
 		<>
-		<nav className="navbar navbar-expand-sm navbar-light bg-light align-left">
+		<nav className="navnav navbar navbar-expand navbar-light bg-light align-right">
 			
 			<Link to="/" className="navbar-brand">
 				<img  src={logo} alt="LOGO" />
@@ -18,7 +18,7 @@ function Navbar() {
 						<Link to="/" className="nav-link">Home</Link>
 					</li>
 					<li className="navbar-item">
-						<Link to="/all-recipes" className="nav-link">Recipes</Link>
+						<Link to="/sources" className="nav-link">Sources</Link>
 					</li>
 				</ul>
 			</div>

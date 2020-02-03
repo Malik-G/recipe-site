@@ -11,7 +11,7 @@ class Home extends Component {
 
 	componentDidMount() {
 		this.nextImage()
-		this.runInterval = setInterval(() => this.nextImage(), 8000)
+		this.runInterval = setInterval(() => this.nextImage(), 4000)
 	}
 
 	// componentWillUnmount() {
@@ -39,7 +39,7 @@ class Home extends Component {
 			<>
 			<div className=".container-fluid black">
 				<div className={`${this.state.background}`}></div>
-				<div className="align-items-center cp-top">
+				<div className="align-items-center margin-top-ab">
 					<div className="col text-center">
 						<CenterPiece customTitle="Recipe Riot"/>
 					</div>
