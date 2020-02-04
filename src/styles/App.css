@@ -1,7 +1,7 @@
 
 body {
 	font-family: 'Josefin Sans', sans-serif !important;
-	background-color: black;
+	/* background-color: black; */
 }
 
 /* ---------------------------------- */
@@ -11,14 +11,14 @@ body {
 	position: relative;
 }
 .black{
-	background-color: black;
+	background-color: rgb(41, 40, 40);
 }
 .campbells-img{
 	background-color: lightgrey;
-	border: 5px solid rgb(207, 145, 145);
+	border: 5px solid lightgrey;
 }
-.header-font{
-	font-size: 2.65rem;
+h1{
+	font-size: 500% !important;
 }
 .inline{
 	display: inline-block;
@@ -47,16 +47,8 @@ body {
 }
 @keyframes icon-hover {
 	50%{
-		/* transform: translateY(-10px); */
-		/* -webkit-transform: translateY(-10px); */
 		transform: scale(0.95);
 	}
-	/* 100%{
-		-webkit-transform: scale(0.8);
-		-ms-transform: scale(0.8);
-		transform: scale(0.8);
-	} */
-
 }
 
 .src-img-div{
@@ -85,9 +77,9 @@ body {
 	/* margin: 50px; */
 	/* left:0; */
 	right:0;
-	top:75px;
+	top:100px;
 	left:0;
-	color: rgb(200, 20, 20);
+	color: white;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -111,11 +103,11 @@ body {
 	
 }
 .background2 {
-	animation: fade-in-out2 ease 4s;
-	-webkit-animation: fade-in-out2 ease 4s;
-	-moz-animation: fade-in-out2 ease 4s;
-	-o-animation: fade-in-out2 ease 4s;
-	-ms-animation: fade-in-out2 ease 4s;
+	animation: fade-in-out ease 4s;
+	-webkit-animation: fade-in-out ease 4s;
+	-moz-animation: fade-in-out ease 4s;
+	-o-animation: fade-in-out ease 4s;
+	-ms-animation: fade-in-out ease 4s;
 	background: url("../images/chicken-strawb.jpg");
 	background-size: cover;
 	min-width: 100vw;
@@ -162,30 +154,31 @@ body {
 	-moz-animation: fade-in-out ease 4s;
 	-o-animation: fade-in-out ease 4s;
 	-ms-animation: fade-in-out ease 4s;
-	background-image: url("https://elvino.co.uk/wp-content/uploads/2016/03/Food-banner-2.jpg");
+	/* background-image: url("https://elvino.co.uk/wp-content/uploads/2016/03/Food-banner-2.jpg"); */
+	background-image: url("../images/healthy-banner4.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 25vh;
 	
 }
 .banner2 {
-	animation: fade-in-out2 ease 4s;
-	-webkit-animation: fade-in-out2 ease 4s;
-	-moz-animation: fade-in-out2 ease 4s;
-	-o-animation: fade-in-out2 ease 4s;
-	-ms-animation: fade-in-out2 ease 4s;
-	background: url("../images/chicken-strawb.jpg");
+	animation: fade-in-out ease 4s;
+	-webkit-animation: fade-in-out ease 4s;
+	-moz-animation: fade-in-out ease 4s;
+	-o-animation: fade-in-out ease 4s;
+	-ms-animation: fade-in-out ease 4s;
+	background: url("../images/chickencurry.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 25vh;
 }
 .banner3 {
-	animation: fade-in-out3 ease 4s;
-	-webkit-animation: fade-in-out3 ease 4s;
-	-moz-animation: fade-in-out3 ease 4s;
-	-o-animation: fade-in-out3 ease 4s;
-	-ms-animation: fade-in-out3 ease 4s;
-	background: url("../images/assorted-pots.jpg");
+	animation: fade-in-out ease 4s;
+	-webkit-animation: fade-in-out ease 4s;
+	-moz-animation: fade-in-out ease 4s;
+	-o-animation: fade-in-out ease 4s;
+	-ms-animation: fade-in-out ease 4s;
+	background: url("../images/healthy_banner2.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 25vh;
@@ -193,16 +186,18 @@ body {
 
 @keyframes fade-in-out {
 	0% {opacity:0;}
-	50% {opacity:0.8}
+	50% {opacity:0.5}
 	100% {opacity:0}
 }
 @keyframes fade-in-out2 {
 	0% {opacity:0;}
-	50% {opacity:0.8}
+	50% {opacity:0.5}
 	100% {opacity:0}
 }
 @keyframes fade-in-out3 {
 	0% {opacity:0;}
-	50% {opacity:0.8}
+	50% {opacity:0.5}
 	100% {opacity:0}
 }
+
+

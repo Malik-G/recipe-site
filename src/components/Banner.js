@@ -36,17 +36,20 @@ class Banner extends Component {
 	render() {
 		return (
 			<>
-			{/* <div className="black"> */}
-				{/* <div className={`${this.state.background} align-items-center text-center`}>
-						<h1 className="banner-text">{this.props.bannerText}</h1>
-				</div> */}
-			{/* </div> */}
 
+				{/* <div className=".container-fluid black">
+					<div className={`${this.state.bannerImg}`}></div>
+					<div className="align-items-center banner-text">
+						<div className="col text-center">
+							<h1 >{this.props.bannerText}</h1>
+						</div>
+					</div>
+				</div> */}
 				<div className=".container-fluid black">
 					<div className={`${this.state.bannerImg}`}></div>
 					<div className="align-items-center banner-text">
 						<div className="col text-center">
-							<h1 className="header-font">{this.props.bannerText}</h1>
+							<h1 >{this.props.bannerText}</h1>
 						</div>
 					</div>
 				</div>
