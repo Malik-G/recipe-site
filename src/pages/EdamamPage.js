@@ -17,7 +17,8 @@ class EdamamPage extends Component {
 		return (
 			<>
 				<Search
-					search={this.state.search}
+					title="Edamam"
+					subtext=""
 					handleChange={this.handleChange}
 					handleSubmit={this.handleSubmit}
 				/>

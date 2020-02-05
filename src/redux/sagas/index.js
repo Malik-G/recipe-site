@@ -11,27 +11,27 @@ function* catchDispatch() {
 
 function* spoonApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/spoonacular/recipes`);
+		const response = yield call(axios.get, `/api/spoon-recipes`);
 		yield put({ type: 'SPOON_REDUCER', payload: response.data });
 	}
 	catch (error) {
-		console.log(`GET request to "/api/spoonacular/recipes" UNSUCCESSFUL: `, error);
+		console.log(`GET request to "/api/spoon-recipes" UNSUCCESSFUL: `, error);
 	}
 }
 
 function* edamamApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/edamam/recipes`);
+		const response = yield call(axios.get, `/api/edamam-recipes`);
 		yield put({ type: 'EDAMAM_REDUCER', payload: response.data });
 	}
 	catch (error) {
-		console.log(`GET request to "/api/edamam/recipes" UNSUCCESSFUL: `, error);
+		console.log(`GET request to "/api/edamam-recipes" UNSUCCESSFUL: `, error);
 	}
 }
 
 function* campbellsApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/campbells/get-results`);
+		const response = yield call(axios.get, `/api/campbells-recipes`);
 		yield put({ type: 'CAMPBELLS_REDUCER', payload: response.data });
 	}
 	catch (error) {

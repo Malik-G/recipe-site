@@ -1,9 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Search from '../components/Search'
 
 class SpoonacularPage extends Component {
-	
-	
+
 	handleChange = (event) => {
 		this.setState({
 			search: event.target.value
@@ -13,12 +12,13 @@ class SpoonacularPage extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault()
 	}
-	
-	render(){
-		return(
+
+	render() {
+		return (
 			<>
 				<Search
-					search={this.state.search}
+					title="Spoonacular"
+					subtext=""
 					handleChange={this.handleChange}
 					handleSubmit={this.handleSubmit}
 				/>

@@ -17,7 +17,8 @@ class CampbellsPage extends Component {
 		return (
 			<>
 				<Search
-					search={this.state.search}
+					title="Campbell's"
+					subtext=""
 					handleChange={this.handleChange}
 					handleSubmit={this.handleSubmit}
 				/>
