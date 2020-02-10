@@ -6,12 +6,12 @@ import { put, call, takeLatest } from 'redux-saga/effects';
 function* catchDispatch() {
 	yield takeLatest('GET_SPOON', spoonApi);
 	yield takeLatest('GET_EDAMAM', edamamApi);
-	yield takeLatest('CAMPBELLS_REDUCER', campbellsApi);
+	yield takeLatest('GET_CAMPBELLS', campbellsApi);
 }
 
 function* spoonApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/spoon-recipes`);
+		const response = yield call(axios.get, `/api/spoon-recipes`, action.payload);
 		yield put({ type: 'SPOON_REDUCER', payload: response.data });
 	}
 	catch (error) {
@@ -21,7 +21,7 @@ function* spoonApi(action) {
 
 function* edamamApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/edamam-recipes`);
+		const response = yield call(axios.get, `/api/edamam-recipes`, action.payload);
 		yield put({ type: 'EDAMAM_REDUCER', payload: response.data });
 	}
 	catch (error) {
@@ -31,16 +31,16 @@ function* edamamApi(action) {
 
 function* campbellsApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/campbells-recipes`);
-		yield put({ type: 'CAMPBELLS_REDUCER', payload: response.data });
+		const response = yield call(axios.get, `/api/campbells-recipes`, action.payload);
+		yield put({ type: 'CAMPBELLS_REDUCER', payload: response });
 	}
 	catch (error) {
-		console.log(`GET request to "/api/campbells/get-results" UNSUCCESSFUL: `, error);
+		console.log(`GET request to "/api/campbells-recipes" UNSUCCESSFUL: `, error);
 	}
 }
 
 // rootSaga is the primary saga
-// It bundles up all of the other sagas then is imported into sagas/index.js
+// It bundles up all of the other sagas then is imported by src/index.js
 function* rootSaga() {
 	yield all([
 		catchDispatch()

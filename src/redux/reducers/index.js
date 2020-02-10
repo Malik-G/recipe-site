@@ -27,8 +27,10 @@ const campbellsReducer = (state = [], action) => {
 	}
 };
 
-export default combineReducers({
+const rootReducer = combineReducers({
 	spoonReducer,
 	edamamReducer,
 	campbellsReducer
 });
+
+export default rootReducer
