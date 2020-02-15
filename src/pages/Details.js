@@ -6,7 +6,7 @@ class Details extends Component {
 	render() {
 		return (
 			<>
-			<h1>Recipe component</h1>
+			<h1>Details component</h1>
 			</>
 		)
 	}

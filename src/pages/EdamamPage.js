@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Search from '../components/Search'
+import RecipeList from '../components/RecipeList'
 
 class EdamamPage extends Component {
 	
@@ -49,7 +50,7 @@ class EdamamPage extends Component {
 					handleChange={this.handleChange}
 					handleSubmit={this.handleSubmit}
 				/>
-				{/* <RecipeList recipes={this.state.data} /> */}
+				<RecipeList recipes={this.props.edamamReducer} />
 			</>
 		)
 	}

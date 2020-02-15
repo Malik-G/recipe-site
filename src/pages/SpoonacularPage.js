@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Search from '../components/Search'
+import RecipeList from '../components/RecipeList'
 
 class SpoonacularPage extends Component {
 
@@ -49,14 +50,14 @@ class SpoonacularPage extends Component {
 					handleChange={this.handleChange}
 					handleSubmit={this.handleSubmit}
 				/>
-				{/* <RecipeList recipes={this.state.data} /> */}
+				<RecipeList recipes={this.props.spoonReducer} />
 			</>
 		)
 	}
 }
 
 const mapToReduxStore = reduxStore => ({
-	edamamReducer: reduxStore.edamamReducer
+	spoonReducer: reduxStore.spoonReducer
 });
 
 export default connect(mapToReduxStore)(SpoonacularPage)

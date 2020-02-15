@@ -2,20 +2,34 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+function transformData(obj) {
+	console.log(obj)
+	let transformedObj = []
+	for (let r of obj) {
+		let newObj = {
+			title: r.recipe.label,
+			image: r.recipe.image,
+			url: r.recipe.url
+		}
+		transformedObj.push(newObj)
+	}
+	return transformedObj
+}
 
-router.get('/', (req, res) => {
+router.get('/:search', (req, res) => {
+	console.log(`https://api.edamam.com/search?q=${req.params.search}&to=2&app_id=${process.env.edamam_appid}&app_key=${process.env.edamam_key}`)
 	axios({
 		method: 'GET',
-		url: `https://api.edamam.com/search?q=${req.body}&app_id=871e1970&app_key=${process.env.edamam_key}`
+		url: `https://api.edamam.com/search?q=${req.params.search}&to=2&app_id=${process.env.edamam_appid}&app_key=${process.env.edamam_key}`	
 	})
-		.then((response) => {
-			console.log(response);
-			//res.send(response.data)
-		})
-		.catch((error) => {
-			console.log(`*****THIS IS THE ERROR: ${error}*****`);
-			res.sendStatus(500)
-		})
+	.then((response) => {
+		let transformedObj = transformData(response.data.hits)
+		res.send(transformedObj)
+	})
+	.catch((error) => {
+		console.log(`*****THIS IS THE ERROR: ${error}*****`);
+		res.sendStatus(500)
+	})
 })
 
 module.exports = router;

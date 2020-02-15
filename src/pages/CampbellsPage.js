@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Search from '../components/Search'
+import RecipeList from '../components/RecipeList'
 
 class CampbellsPage extends Component {
 
@@ -18,7 +19,7 @@ class CampbellsPage extends Component {
 			alert('Your search cannot be empty')
 		}
 		else if (searchString.match(regexNumbers) == null && searchString.match(regexSpecialChar) == null) {
-			this.props.dispatch({ type: 'GET_CAMPBELLS', payload: searchString })
+			this.props.dispatch({ type: 'GET_CAMPBELLS', payload: this.state.search })
 		}
 		else if (searchString.match(regexNumbers) !== null){
 			alert('Your search cannot contain numbers or special characters')
@@ -40,18 +41,19 @@ class CampbellsPage extends Component {
 	}
 
 	render() {
-
-		console.log(this.state.search)
 		return (
 			<>
-				<Search
-					title="Campbell's"
-					subtext=""
-					getRecipes={this.getRecipes}
-					handleChange={this.handleChange}
-					handleSubmit={this.handleSubmit}
-				/>
-				{/* <RecipeList recipes={this.state.data} /> */}
+				
+					<Search
+						title="Campbell's"
+						subtext=""
+						getRecipes={this.getRecipes}
+						handleChange={this.handleChange}
+						handleSubmit={this.handleSubmit}
+					/>
+
+					<RecipeList recipes={this.props.campbellsReducer} />
+				
 			</>
 		)
 	}

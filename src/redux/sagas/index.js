@@ -1,6 +1,8 @@
+
 import axios from 'axios';
 import { all } from 'redux-saga/effects';
 import { put, call, takeLatest } from 'redux-saga/effects';
+require('dotenv').config()
 
 //this function directs the dispatches that are called from the components
 function* catchDispatch() {
@@ -11,7 +13,7 @@ function* catchDispatch() {
 
 function* spoonApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/spoon-recipes`, action.payload);
+		const response = yield call(axios.get, `/api/spoon-recipes/${action.payload}`);
 		yield put({ type: 'SPOON_REDUCER', payload: response.data });
 	}
 	catch (error) {
@@ -21,7 +23,7 @@ function* spoonApi(action) {
 
 function* edamamApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/edamam-recipes`, action.payload);
+		const response = yield call(axios.get, `/api/edamam-recipes/${action.payload}`);
 		yield put({ type: 'EDAMAM_REDUCER', payload: response.data });
 	}
 	catch (error) {
@@ -31,8 +33,8 @@ function* edamamApi(action) {
 
 function* campbellsApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/campbells-recipes`, action.payload);
-		yield put({ type: 'CAMPBELLS_REDUCER', payload: response });
+		const response = yield call(axios.get, `/api/campbells-recipes/${action.payload}`);
+		yield put({ type: 'CAMPBELLS_REDUCER', payload: response.data });
 	}
 	catch (error) {
 		console.log(`GET request to "/api/campbells-recipes" UNSUCCESSFUL: `, error);

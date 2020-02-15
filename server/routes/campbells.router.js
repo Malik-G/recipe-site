@@ -2,21 +2,31 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+function transformData(obj) {
+	//console.log(obj)
+	let transformedObj = []
+	for (let recipe of obj) {
+		let newObj = {
+			title: recipe.Name,
+			image: recipe.RecipeMetaRecords[3].Value,
+			url: `https://www.campbells.com/kitchen/recipes/${recipe.Name.replace(/ /g, "-")}`
+		}
+		transformedObj.push(newObj)
+	}
+	return transformedObj
+}
 
-router.get('/', (req, res) => {
-	console.log(`https://services.campbells.com/api/Recipes/recipe/search?q=${req.body}
-				&limit=2&api-key=${process.env.campbells_key}`)
+router.get('/:search', (req, res) => {
 	axios({
 		method: 'GET',
-		url: `https://services.campbells.com/api/Recipes/recipe/search?q=${req.body}
-				&limit=2&api-key=${process.env.campbells_key}`
+		url: `https://services.campbells.com/api/Recipes/recipe/search?q=${req.params.search}&limit=6&api-key=${process.env.campbells_key}`
 	})
 		.then((response) => {
-			console.log(response);
-			//res.send(response.data)
+			let transformedObj = transformData(response.data.Result)
+			res.send(transformedObj)
 		})
 		.catch((error) => {
-			console.log(`*****THIS IS THE ERROR: ${error}*****`);
+			console.log(`\n*****\nTHIS IS THE ERROR: ${error}\n*****\n`);
 			res.sendStatus(500)
 		})
 })
