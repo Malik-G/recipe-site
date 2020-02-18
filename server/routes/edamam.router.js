@@ -17,10 +17,9 @@ function transformData(obj) {
 }
 
 router.get('/:search', (req, res) => {
-	console.log(`https://api.edamam.com/search?q=${req.params.search}&to=2&app_id=${process.env.edamam_appid}&app_key=${process.env.edamam_key}`)
 	axios({
 		method: 'GET',
-		url: `https://api.edamam.com/search?q=${req.params.search}&to=2&app_id=${process.env.edamam_appid}&app_key=${process.env.edamam_key}`	
+		url: `https://api.edamam.com/search?q=${req.params.search}&to=6&app_id=${process.env.edamam_appid}&app_key=${process.env.edamam_key}`	
 	})
 	.then((response) => {
 		let transformedObj = transformData(response.data.hits)

@@ -1,10 +1,9 @@
 
 body {
 	font-family: 'Josefin Sans', sans-serif !important;
-	/* background-color: black; */
 }
 
-/* ---------------------------------- */
+/* --------------------------------------------------------------------- */
 
 .align-center{
 	text-align: center;
@@ -26,6 +25,17 @@ h1{
 .letter-spacing {
 	letter-spacing: 0.5rem;
 }
+.loading-container{
+	max-width: 100vw;
+	text-align: center;
+}
+.load-image{
+	margin-top: 5%;
+	height: 300px;
+	width:320px;
+	animation: icon-pulse ease-in-out 1s;
+	animation-iteration-count: infinite;
+}
 .margin {
 	margin: 5%;
 }
@@ -43,17 +53,10 @@ h1{
 	width:200px;
 	border-radius: 50%;
 }
-
 .src-img:hover{
-	animation: icon-hover ease-in-out 1s;
+	animation: icon-pulse ease-in-out 1s;
 	animation-iteration-count: infinite;
 }
-@keyframes icon-hover {
-	50%{
-		transform: scale(0.95);
-	}
-}
-
 .src-img-div{
 	border: 0.3rem solid black;
 	border-radius: 50%;
@@ -71,14 +74,12 @@ h1{
 	font-family: 'IM Fell Great Primer SC', serif;
 }
 
+/* --------------------------------------------------------------------- */
 
 /* BANNER/BACKGROUND STYLING */
 
 .banner-text {
-	/* margin-top:5%; */
 	position: absolute;
-	/* margin: 50px; */
-	/* left:0; */
 	right:0;
 	top:90px;
 	left:0;
@@ -151,13 +152,11 @@ h1{
 }
 
 .banner1 {
-	/* transition: background-image 4s ease-in-out .5s; */
-	animation: fade-in-out ease 4s;
-	-webkit-animation: fade-in-out ease 4s;
-	-moz-animation: fade-in-out ease 4s;
-	-o-animation: fade-in-out ease 4s;
-	-ms-animation: fade-in-out ease 4s;
-	/* background-image: url("https://elvino.co.uk/wp-content/uploads/2016/03/Food-banner-2.jpg"); */
+	animation: fade-in-out ease 5s;
+	-webkit-animation: fade-in-out ease 5s;
+	-moz-animation: fade-in-out ease 5s;
+	-o-animation: fade-in-out ease 5s;
+	-ms-animation: fade-in-out ease 5s;
 	background-image: url("../images/healthy-banner4.jpg");
 	background-size: cover;
 	min-width: 100vw;
@@ -165,27 +164,31 @@ h1{
 	
 }
 .banner2 {
-	animation: fade-in-out2 ease 4s;
-	-webkit-animation: fade-in-out2 ease 4s;
-	-moz-animation: fade-in-out2 ease 4s;
-	-o-animation: fade-in-out2 ease 4s;
-	-ms-animation: fade-in-out2 ease 4s;
+	animation: fade-in-out2 ease 5s;
+	-webkit-animation: fade-in-out2 ease 5s;
+	-moz-animation: fade-in-out2 ease 5s;
+	-o-animation: fade-in-out2 ease 5s;
+	-ms-animation: fade-in-out2 ease 5s;
 	background: url("../images/chickencurry.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 25vh;
 }
 .banner3 {
-	animation: fade-in-out3 ease 4s;
-	-webkit-animation: fade-in-out3 ease 4s;
-	-moz-animation: fade-in-out3 ease 4s;
-	-o-animation: fade-in-out3 ease 4s;
-	-ms-animation: fade-in-out3 ease 4s;
+	animation: fade-in-out3 ease 5s;
+	-webkit-animation: fade-in-out3 ease 5s;
+	-moz-animation: fade-in-out3 ease 5s;
+	-o-animation: fade-in-out3 ease 5s;
+	-ms-animation: fade-in-out3 ease 5s;
 	background: url("../images/healthy_banner2.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 25vh;
 }
+
+/* --------------------------------------------------------------------- */
+
+/* KEYFRAMES */
 
 @keyframes fade-in-out {
 	0% {opacity:0;}
@@ -202,5 +205,6 @@ h1{
 	50% {opacity:0.5}
 	100% {opacity:0}
 }
-
-
+@keyframes icon-pulse {
+	50% {transform: scale(0.95);}
+}

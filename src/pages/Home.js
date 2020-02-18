@@ -8,7 +8,6 @@ class Home extends Component {
 		background:'background1'
 	}
 
-
 	componentDidMount() {
 		this.nextImage()
 		this.runInterval = setInterval(() => this.nextImage(), 4000)

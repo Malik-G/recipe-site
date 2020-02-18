@@ -2,38 +2,49 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Search from '../components/Search'
 import RecipeList from '../components/RecipeList'
+import LoadingScreen from '../components/LoadingScreen'
 
 class CampbellsPage extends Component {
 
 	state = {
-		search: ''
+		search: '',
+		loading: false
 	}
+
+	//Come back to experiment with making setState a Promise
+	// promise1 = new Promise((resolve, reject) => {
+
+	// })
 
 	getRecipes = (event) => {
 		event.preventDefault()
-		let searchString = this.state.search
 		const regexNumbers = /[0-9]/g
 		const regexSpecialChar = /[~`!@#$%^&*()_\-+=,.<>?/"':;{}[\]|\\]/g
 
 		if (this.state.search === '') {
 			alert('Your search cannot be empty')
 		}
-		else if (searchString.match(regexNumbers) == null && searchString.match(regexSpecialChar) == null) {
-			this.props.dispatch({ type: 'GET_CAMPBELLS', payload: this.state.search })
+		else if (this.state.search.match(regexNumbers) == null && this.state.search.match(regexSpecialChar) == null) {
+			this.setState({ loading: true }, () => { this.triggerDispatch() })
 		}
-		else if (searchString.match(regexNumbers) !== null){
+		else if (this.state.search.match(regexNumbers) !== null) {
 			alert('Your search cannot contain numbers or special characters')
 		}
-		else if (searchString.match(regexSpecialChar) !== null) {
+		else if (this.state.search.match(regexSpecialChar) !== null) {
 			alert('Your search cannot contain numbers or special characters')
 		}
-		else return
+		else console.log('else')
+	}
+
+	triggerDispatch = () => {
+		this.props.dispatch({ type: 'GET_CAMPBELLS', payload: this.state.search })
+		setTimeout(() => {
+			this.setState({ loading: false })
+		}, 3000);
 	}
 
 	handleChange = (event) => {
-		this.setState({
-			search: event.target.value
-		})
+		this.setState({ search: event.target.value })
 	}
 
 	handleSubmit = (event) => {
@@ -41,19 +52,17 @@ class CampbellsPage extends Component {
 	}
 
 	render() {
+		let RecipeListInsert = this.state.loading ? <LoadingScreen /> : <RecipeList recipes={this.props.campbellsReducer} />
 		return (
 			<>
-				
-					<Search
-						title="Campbell's"
-						subtext=""
-						getRecipes={this.getRecipes}
-						handleChange={this.handleChange}
-						handleSubmit={this.handleSubmit}
-					/>
-
-					<RecipeList recipes={this.props.campbellsReducer} />
-				
+				<Search
+					title="Campbell's"
+					subtext=""
+					getRecipes={this.getRecipes}
+					handleChange={this.handleChange}
+					handleSubmit={this.handleSubmit}
+				/>
+				{RecipeListInsert}
 			</>
 		)
 	}

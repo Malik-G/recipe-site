@@ -25,13 +25,6 @@ class AllRecipes extends Component {
 			<Banner bannerText="Sources"/>
 			<div className="text-align-center">
 					<div className="margin inline">
-						<Link to="/spoon">
-							<img src={Spoon} className="src-img spoon-img" alt="spoonacular-logo" />
-						</Link>
-						<h4>Spoonacular</h4>
-					</div>
-					
-					<div className="margin inline">
 						<Link to="/edamam">
 							<img src={Edamam} className="src-img edamam-img " alt="edamam-logo" />
 						</Link>
@@ -43,6 +36,13 @@ class AllRecipes extends Component {
 							<img src={Campbells} className="src-img campbells-img" alt="campbells-logo" />
 						</Link>
 						<h4>Campbell's</h4>
+					</div>
+
+					<div className="margin inline">
+						<Link to="/spoon">
+							<img src={Spoon} className="src-img spoon-img" alt="spoonacular-logo" />
+						</Link>
+						<h4>Spoonacular</h4>
 					</div>
 			</div>
 			</>
