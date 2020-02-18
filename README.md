@@ -9,6 +9,6 @@ This is a proof of concept recipe website that pulls data from multiple APIs (ba
 ![Table](src/images/sources-page.png)
 
 
-## Expample of a recipe results from a specific source
+## Expample of recipe results from a specific source
 ![Table](src/images/campbells-page.png)
 
