@@ -4,9 +4,11 @@ This is a proof of concept recipe website that pulls data from multiple APIs (ba
 ## Home Page
 ![Table](src/images/recipe-riot-home.png)
 
+
 ## Sources Page
 ![Table](src/images/sources-page.png)
 
-## Expample of a specific source page
+
+## Expample of a recipe results from a specific source
 ![Table](src/images/campbells-page.png)
 
