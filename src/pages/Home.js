@@ -36,14 +36,14 @@ class Home extends Component {
 	render() {
 		return (
 			<>
-			<div className=".container-fluid black">
-				<div className={`${this.state.background}`}></div>
-				<div className="align-items-center margin-top-ab">
-					<div className="col text-center">
-						<CenterPiece customTitle="Recipe Riot"/>
-					</div>
-				</div>
-			</div>
+			 <div className=".container-fluid black">
+			 	<div className={`${this.state.background}`}></div>
+			 	<div className="align-items-center margin-top-ab">
+			 		<div className="col text-center">
+			 			<CenterPiece customTitle="Recipe Riot"/>
+			 		</div>
+			 	</div>
+			 </div>
 			
 			</>
 		)

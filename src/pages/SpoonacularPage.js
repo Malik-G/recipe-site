@@ -11,6 +11,10 @@ class SpoonacularPage extends Component {
 		loading: false
 	}
 
+	componentWillMount() {
+		this.runTimeout = setTimeout(() => alert('Please use this API sparingly, it\'s expensive.'), 800)
+	}
+
 	getRecipes = (event) => {
 		event.preventDefault()
 		const regexNumbers = /[0-9]/g
@@ -35,9 +39,9 @@ class SpoonacularPage extends Component {
 		this.props.dispatch({ type: 'GET_SPOON', payload: this.state.search })
 		setTimeout(() => {
 			this.setState({ loading: false })
-		}, 3000);
+		}, 4000);
 	}
-	
+
 	handleChange = (event) => {
 		this.setState({
 			search: event.target.value

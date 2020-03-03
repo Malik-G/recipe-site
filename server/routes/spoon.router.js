@@ -2,7 +2,27 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-//obj not iterable
+function checkForImage(imgSource) {
+	if (imgSource === '' || imgSource === undefined || imgSource === null || imgSource.substring(0, 4) !== 'http') {
+		return `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png`
+	}
+	else return imgSource
+}
+
+function getIngredients(obj) {
+	let ingredientArray = []
+	for (let item of obj) {
+		if (item.name === null) {
+			continue
+		}
+		else {
+			ingredientArray.push(item.name)
+		}
+	}
+	return ingredientArray
+}
+
+//this obj is not iterable, but obj.results is an array
 function getRecipeIDs(obj){
 	let idArray = []
 	for (let recipe of obj.results) {
@@ -18,8 +38,9 @@ function transformData(obj) {
 	for (let recipe of obj) {
 		let newObj = {
 			title: recipe.title,
-			image: recipe.image,
-			url: recipe.sourceUrl
+			image: checkForImage(recipe.image),
+			url: recipe.sourceUrl,
+			ingredients: getIngredients(recipe.extendedIngredients)
 		}
 		transformedObj.push(newObj)
 	}

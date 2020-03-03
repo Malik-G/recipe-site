@@ -6,7 +6,6 @@ import Spoon from '../images/spoonacular-logo.png';
 import Edamam from '../images/edamam-logo1.jpg';
 import Campbells from '../images/campbells-logo.png';
 
-
 class AllRecipes extends Component {
 	// constructor(props){
 	// 	super(props);
@@ -16,8 +15,6 @@ class AllRecipes extends Component {
 		data: recipeData,
 		search: ''
 	}
-
-	
 	
 	render() {
 		return (

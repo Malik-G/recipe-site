@@ -40,7 +40,7 @@ class CampbellsPage extends Component {
 		this.props.dispatch({ type: 'GET_CAMPBELLS', payload: this.state.search })
 		setTimeout(() => {
 			this.setState({ loading: false })
-		}, 3000);
+		}, 4000);
 	}
 
 	handleChange = (event) => {

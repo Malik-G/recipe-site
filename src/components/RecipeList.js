@@ -8,7 +8,7 @@ class RecipeList extends Component {
 			<>
 				<div className="container py-5">
 					<div className="row">
-						{this.props.recipes.map(r => <Recipe key={r.id} re={r} />)}
+						{this.props.recipes.map( (r, i) => <Recipe key={i} re={r} />)}
 					</div>
 				</div>
 			</>
