@@ -94,12 +94,12 @@ h1{
 	min-height: 100vh;
 }
 .background1 {
-	/* transition: background-image 4s ease-in-out .5s; */
-	animation: fade-in-out ease 4s;
-	-webkit-animation: fade-in-out ease 4s;
-	-moz-animation: fade-in-out ease 4s;
-	-o-animation: fade-in-out ease 4s;
-	-ms-animation: fade-in-out ease 4s;
+	/* transition: background-image 6s ease-in-out .6s; */
+	animation: fade-in-out ease 6s;
+	-webkit-animation: fade-in-out ease 6s;
+	-moz-animation: fade-in-out ease 6s;
+	-o-animation: fade-in-out ease 6s;
+	-ms-animation: fade-in-out ease 6s;
 	background-image: url("../images/sandwhich.jpeg");
 	background-size: cover;
 	min-width: 100vw;
@@ -107,44 +107,44 @@ h1{
 	
 }
 .background2 {
-	animation: fade-in-out2 ease 4s;
-	-webkit-animation: fade-in-out2 ease 4s;
-	-moz-animation: fade-in-out2 ease 4s;
-	-o-animation: fade-in-out2 ease 4s;
-	-ms-animation: fade-in-out2 ease 4s;
+	animation: fade-in-out2 ease 6s;
+	-webkit-animation: fade-in-out2 ease 6s;
+	-moz-animation: fade-in-out2 ease 6s;
+	-o-animation: fade-in-out2 ease 6s;
+	-ms-animation: fade-in-out2 ease 6s;
 	background: url("../images/chicken-strawb.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 100vh;
 }
 .background3 {
-	animation: fade-in-out3 ease 4s;
-	-webkit-animation: fade-in-out3 ease 4s;
-	-moz-animation: fade-in-out3 ease 4s;
-	-o-animation: fade-in-out3 ease 4s;
-	-ms-animation: fade-in-out3 ease 4s;
+	animation: fade-in-out3 ease 6s;
+	-webkit-animation: fade-in-out3 ease 6s;
+	-moz-animation: fade-in-out3 ease 6s;
+	-o-animation: fade-in-out3 ease 6s;
+	-ms-animation: fade-in-out3 ease 6s;
 	background: url("../images/assorted-pots.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 100vh;
 }
 .background4 {
-	animation: fade-in-out ease 4s;
-	-webkit-animation: fade-in-out ease 4s;
-	-moz-animation: fade-in-out ease 4s;
-	-o-animation: fade-in-out ease 4s;
-	-ms-animation: fade-in-out ease 4s;
+	animation: fade-in-out ease 6s;
+	-webkit-animation: fade-in-out ease 6s;
+	-moz-animation: fade-in-out ease 6s;
+	-o-animation: fade-in-out ease 6s;
+	-ms-animation: fade-in-out ease 6s;
 	background: url("../images/eggs.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 100vh;
 }
 .background5 {
-	animation: fade-in-out2 ease 4s;
-	-webkit-animation: fade-in-out2 ease 4s;
-	-moz-animation: fade-in-out2 ease 4s;
-	-o-animation: fade-in-out2 ease 4s;
-	-ms-animation: fade-in-out2 ease 4s;
+	animation: fade-in-out2 ease 6s;
+	-webkit-animation: fade-in-out2 ease 6s;
+	-moz-animation: fade-in-out2 ease 6s;
+	-o-animation: fade-in-out2 ease 6s;
+	-ms-animation: fade-in-out2 ease 6s;
 	background: url("../images/corn-squash.jpg");
 	background-size: cover;
 	min-width: 100vw;
@@ -152,11 +152,11 @@ h1{
 }
 
 .banner1 {
-	animation: fade-in-out ease 5s;
-	-webkit-animation: fade-in-out ease 5s;
-	-moz-animation: fade-in-out ease 5s;
-	-o-animation: fade-in-out ease 5s;
-	-ms-animation: fade-in-out ease 5s;
+	animation: fade-in-out ease 6s;
+	-webkit-animation: fade-in-out ease 6s;
+	-moz-animation: fade-in-out ease 6s;
+	-o-animation: fade-in-out ease 6s;
+	-ms-animation: fade-in-out ease 6s;
 	background-image: url("../images/healthy-banner4.jpg");
 	background-size: cover;
 	min-width: 100vw;
@@ -164,22 +164,22 @@ h1{
 	
 }
 .banner2 {
-	animation: fade-in-out2 ease 5s;
-	-webkit-animation: fade-in-out2 ease 5s;
-	-moz-animation: fade-in-out2 ease 5s;
-	-o-animation: fade-in-out2 ease 5s;
-	-ms-animation: fade-in-out2 ease 5s;
+	animation: fade-in-out2 ease 6s;
+	-webkit-animation: fade-in-out2 ease 6s;
+	-moz-animation: fade-in-out2 ease 6s;
+	-o-animation: fade-in-out2 ease 6s;
+	-ms-animation: fade-in-out2 ease 6s;
 	background: url("../images/chickencurry.jpg");
 	background-size: cover;
 	min-width: 100vw;
 	min-height: 25vh;
 }
 .banner3 {
-	animation: fade-in-out3 ease 5s;
-	-webkit-animation: fade-in-out3 ease 5s;
-	-moz-animation: fade-in-out3 ease 5s;
-	-o-animation: fade-in-out3 ease 5s;
-	-ms-animation: fade-in-out3 ease 5s;
+	animation: fade-in-out3 ease 6s;
+	-webkit-animation: fade-in-out3 ease 6s;
+	-moz-animation: fade-in-out3 ease 6s;
+	-o-animation: fade-in-out3 ease 6s;
+	-ms-animation: fade-in-out3 ease 6s;
 	background: url("../images/healthy_banner2.jpg");
 	background-size: cover;
 	min-width: 100vw;
@@ -192,17 +192,17 @@ h1{
 
 @keyframes fade-in-out {
 	0% {opacity:0;}
-	50% {opacity:0.5}
+	70% {opacity:0.5}
 	100% {opacity:0}
 }
 @keyframes fade-in-out2 {
 	0% {opacity:0;}
-	50% {opacity:0.5}
+	70% {opacity:0.5}
 	100% {opacity:0}
 }
 @keyframes fade-in-out3 {
 	0% {opacity:0;}
-	50% {opacity:0.5}
+	70% {opacity:0.5}
 	100% {opacity:0}
 }
 @keyframes icon-pulse {

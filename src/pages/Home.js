@@ -10,7 +10,7 @@ class Home extends Component {
 
 	componentDidMount() {
 		this.nextImage()
-		this.runInterval = setInterval(() => this.nextImage(), 4000)
+		this.runInterval = setInterval(() => this.nextImage(), 6000)
 	}
 
 	// componentWillUnmount() {
@@ -24,7 +24,7 @@ class Home extends Component {
 			imageNumber = 1
 		}
 		switch(imageNumber) {
-			case 1: this.setState({image: 1, background:'background1'}); break;
+			case 1: this.setState({image: 1, background: 'background1' }); break;
 			case 2: this.setState({image: 2, background: 'background2' }); break;
 			case 3: this.setState({image: 3, background: 'background3' }); break;
 			case 4: this.setState({image: 4, background: 'background4' }); break;

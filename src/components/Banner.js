@@ -8,7 +8,7 @@ class Banner extends Component {
 
 	componentDidMount() {
 		this.nextImage()
-		this.runInterval = setInterval(() => this.nextImage(), 5000)
+		this.runInterval = setInterval(() => this.nextImage(), 6000)
 	}
 
 	// componentWillUnmount() {
