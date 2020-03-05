@@ -10,7 +10,7 @@ class Home extends Component {
 
 	componentDidMount() {
 		this.nextImage()
-		this.runInterval = setInterval(() => this.nextImage(), 6000)
+		this.runInterval = setInterval(() => this.nextImage(), 8000)
 	}
 
 	// componentWillUnmount() {
