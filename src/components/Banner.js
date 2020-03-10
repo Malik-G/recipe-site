@@ -36,7 +36,7 @@ class Banner extends Component {
 					<div className={`${this.state.bannerImg}`}></div>
 					<div className="align-items-center banner-text">
 						<div className="col text-center">
-							<h1 >{this.props.bannerText}</h1>
+							<p>{this.props.bannerText}</p>
 						</div>
 					</div>
 				</div>

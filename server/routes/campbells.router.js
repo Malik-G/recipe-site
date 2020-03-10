@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
-function checkForImage(imgSource){
-	if (imgSource === '' || imgSource === undefined || imgSource === null || imgSource.substring(0, 4) !== 'http'){
+function checkForImage(imgSource) {
+	if (imgSource === '' || imgSource === undefined || imgSource === null || imgSource.substring(0, 4) !== 'http') {
 		return `https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png`
 	}
 	else return imgSource
 }
 
-function getIngredients(obj){
+function getIngredients(obj) {
 	let ingredientArray = []
 	for (let item of obj) {
 		if (item.ExternalProduct === null || item.ExternalProduct === undefined) {

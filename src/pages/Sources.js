@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
-import {recipeData} from '../data/tempList';
 import Spoon from '../images/spoonacular-logo.png';
 import Edamam from '../images/edamam-logo1.jpg';
 import Campbells from '../images/campbells-logo.png';
@@ -11,10 +10,6 @@ class AllRecipes extends Component {
 	// 	super(props);
 	// }
 
-	state = {
-		data: recipeData,
-		search: ''
-	}
 	
 	render() {
 		return (
