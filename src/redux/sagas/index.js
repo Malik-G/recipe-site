@@ -13,7 +13,7 @@ function* catchDispatch() {
 
 function* spoonApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/spoon-recipes/${action.payload}`);
+		const response = yield call(axios.get, `/.netlify/functions/server/api/spoon-recipes/${action.payload}`);
 		yield put({ type: 'SPOON_REDUCER', payload: response.data });
 	}
 	catch (error) {
@@ -23,7 +23,7 @@ function* spoonApi(action) {
 
 function* edamamApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/edamam-recipes/${action.payload}`);
+		const response = yield call(axios.get, `/.netlify/functions/server/api/edamam-recipes/${action.payload}`);
 		yield put({ type: 'EDAMAM_REDUCER', payload: response.data });
 	}
 	catch (error) {
@@ -33,7 +33,7 @@ function* edamamApi(action) {
 
 function* campbellsApi(action) {
 	try {
-		const response = yield call(axios.get, `/api/campbells-recipes/${action.payload}`);
+		const response = yield call(axios.get, `/.netlify/functions/server/api/campbells-recipes/${action.payload}`);
 		yield put({ type: 'CAMPBELLS_REDUCER', payload: response.data });
 	}
 	catch (error) {
